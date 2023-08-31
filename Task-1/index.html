@@ -5,35 +5,55 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Temperature Converter</title>
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="./favicon_io/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./favicon_io/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="./favicon_io/favicon-16x16.png"
+    />
+    <link rel="manifest" href="./favicon_io/site.webmanifest" />
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <form>
-      <div class="container">
-        <div class="heading">
-          <h1>Temperature Converter</h1>
+    <div class="outer-container">
+      <form>
+        <div class="container">
+          <div class="heading">
+            <h1>Temperature Converter</h1>
+          </div>
+          <div class="content">
+            <label for="temp">Degree</label>
+            <input
+              inputmode="decimal"
+              id="temp"
+              name="temp"
+              placeholder="Temperature to convert"
+            />
+            <label for="temp">Type</label>
+            <select name="options" id="options">
+              <option>-- Select --</option>
+              <option value="cel">Celcius</option>
+              <option value="fah">Fahrenheit</option>
+            </select>
+            <br />
+            <input type="submit" value="CONVERT" name="temp" />
+            <br />
+            <span id="result"></span>
+          </div>
         </div>
-        <div class="content">
-          <label for="temp">Degree</label>
-          <input
-            inputmode="decimal"
-            id="temp"
-            name="temp"
-            placeholder="Temperature to convert"
-          />
-          <label for="temp">Type</label>
-          <select name="options" id="options">
-            <option>-- Select --</option>
-            <option value="cel">Celcius</option>
-            <option value="fah">Fahrenheit</option>
-          </select>
-          <br />
-          <input type="submit" value="CONVERT" name="temp" />
-          <br />
-          <span id="result"></span>
-        </div>
-      </div>
-    </form>
+      </form>
+    </div>
     <script src="script.js"></script>
   </body>
 </html>
